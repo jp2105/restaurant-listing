@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ReactStars from "react-rating-stars-component";
 import { FacebookShareButton } from "react-share";
-
+import Reviews from "./Reviews"
 const RestaurantCard = ({ restaurant, index }) => {
     const [like, setLike] = useState(false)
     const avgRating = (reviews) => {
@@ -26,8 +26,10 @@ const RestaurantCard = ({ restaurant, index }) => {
                     classNames={'rating-start'}
                     isHalf
                 />
-                {/* <p className='r-address'><img className='small-icon' src={require(`./../Assets/star.png`)} />{avgRating(restaurant.reviews)}</p> */}
+                <Reviews restaurant={restaurant} />
+
             </div>
+
         </div>
         <div className="social-container">
             <img alt="img" className='like-icon' onClick={() => setLike(like => !like)} src={like ? require(`./../Assets/heart.png`) : require(`./../Assets/like.png`)} />
@@ -38,6 +40,7 @@ const RestaurantCard = ({ restaurant, index }) => {
                 <img alt="img" className='like-icon share-button' src={require(`./../Assets/send.png`)} />
             </FacebookShareButton>
         </div>
+
     </div>
 }
 

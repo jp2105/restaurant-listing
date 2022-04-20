@@ -11,3 +11,36 @@
         margin: 0px 30px;
     }
 }
+
+.review-container {
+    .show-more {
+        font-size: 14px;
+        color: blue;
+    }
+
+    .week-days {
+        line-height: 20px;
+        font-size: 14px;
+        color: #a9a9a9;
+    }
+
+    .heading {
+        font-size: 18px;
+        color: #6f6262;
+        font-weight: blod;
+        text-decoration: underline;
+    }
+
+    .review-name {
+        line-height: 20px;
+        font-size: 16px;
+        color: #000;
+    }
+
+    .review-comments {
+        line-height: 14px;
+        line-height: 25px;
+        color: #a9a9a9;
+
+    }
+}

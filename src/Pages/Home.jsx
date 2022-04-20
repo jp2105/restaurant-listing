@@ -22,7 +22,7 @@ const Home = () => {
 
 
     return (
-        <div >
+        <div>
             <Header />
             <div className='home-container'>
                 {restaurantData.map((item, index) => {
@@ -30,7 +30,6 @@ const Home = () => {
                 })}
             </div>
             {restaurantData.length && <Map restaurantData={restaurantData} />}
-
         </div>
     )
 }
