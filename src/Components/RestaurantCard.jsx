@@ -2,15 +2,10 @@ import { useState } from "react";
 import ReactStars from "react-rating-stars-component";
 import { FacebookShareButton } from "react-share";
 import Reviews from "./Reviews"
+import { avgRating } from "../Helper";
 const RestaurantCard = ({ restaurant, index }) => {
     const [like, setLike] = useState(false)
-    const avgRating = (reviews) => {
-        let totalRating = 0;
-        reviews?.map(review => {
-            totalRating += review?.rating;
-        })
-        return totalRating / reviews.length;
-    }
+
     return <div className='restaurant-main-card'>
         <div className='card-top'>
             <img className='restaurant-img' src={require(`./../Assets/${index + 1}.jpeg`)} alt="img" />
@@ -26,7 +21,7 @@ const RestaurantCard = ({ restaurant, index }) => {
                     classNames={'rating-start'}
                     isHalf
                 />
-                <Reviews restaurant={restaurant} />
+                <Reviews key={restaurant.id} restaurant={restaurant} />
 
             </div>
 

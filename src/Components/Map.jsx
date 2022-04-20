@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from "react";
 
 import { GoogleMap, useJsApiLoader, Marker } from "@react-google-maps/api";
-
+import { avgRating } from "../Helper";
 const MapDisplay = ({ restaurantData }) => {
     const center = { lat: 40.743394, lng: -73.954235 }
     const containerStyle = {
@@ -20,16 +20,11 @@ const MapDisplay = ({ restaurantData }) => {
     }, [])
 
 
-    const onUnmount = useCallback(function callback(map) {
+    const onUnmount = useCallback(function callback() {
+        console.log(map)
         setMap(null)
-    }, [])
-    const avgRating = (reviews) => {
-        let totalRating = 0;
-        reviews?.map(review => {
-            totalRating += review?.rating;
-        })
-        return Math.round(totalRating / reviews.length);
-    }
+    }, [map])
+
     return (
         <div style={{ height: '100vh', width: '100%' }}>
             {isLoaded && <GoogleMap

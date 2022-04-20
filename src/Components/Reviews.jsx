@@ -1,24 +1,18 @@
 import React, { useState } from 'react';
 import ReactStars from "react-rating-stars-component";
-
+import { avgRating } from '../Helper';
 const Reviews = ({ restaurant }) => {
 
     const [open, setOpen] = useState(false);
-    const avgRating = (reviews) => {
-        let totalRating = 0;
-        reviews?.map(review => {
-            totalRating += review?.rating;
-        })
-        return totalRating / reviews.length;
-    }
+
     return (
         <div className='review-container'>
             {!open && <p className='show-more' onClick={() => setOpen(open => !open)}>more details...</p>}
             {open && <div>
                 <div>
                     <p className='heading'>Operating hours</p>
-                    {Object.keys(restaurant.operating_hours).map(key => {
-                        return <div className='week-days'>{key}: {restaurant.operating_hours[key]}</div>
+                    {Object.keys(restaurant.operating_hours).map(keyValue => {
+                        return <div key={keyValue} className='week-days'>{keyValue}: {restaurant.operating_hours[keyValue]}</div>
                     })}
                 </div>
                 <div>

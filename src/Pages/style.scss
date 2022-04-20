@@ -1,4 +1,50 @@
 .home-container {
+    .sort-by {
+        margin: 5px 20vw;
+        display: flex;
+        justify-content: flex-end;
+
+        @media (max-width: 768px) {
+            margin: 10px !important;
+        }
+
+    }
+
+    @media (max-width: 768px) {
+
+        width: 100% !important;
+        padding: 1px !important;
+
+        .social-container {
+            margin: 14px !important;
+        }
+
+        .restaurant-main-card {
+            margin: 10px !important;
+
+            .card-top {
+                .card-name {
+                    word-break: break-all !important;
+                    line-height: 20px !important;
+
+                    .r-name {
+                        overflow-wrap: break-word !important;
+                    }
+                }
+            }
+        }
+
+        .restaurant-img {
+            height: 40px !important;
+            width: 40px !important;
+
+            margin: 20px 0 !important;
+
+        }
+
+
+    }
+
     min-height: 92vh;
     width: 100vw;
     background: #efefef;
@@ -28,7 +74,6 @@
                     font-size: 20px;
                     font-weight: bold;
                     color: #FF3b3f;
-                    line-height: 0px;
                 }
 
                 .r-address {
