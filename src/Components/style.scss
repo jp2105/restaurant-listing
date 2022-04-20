@@ -1,0 +1,13 @@
+.headerMain {
+    height: 8vh;
+    background: #FF3b3f;
+    display: flex;
+    align-items: center;
+    color: #fff;
+
+    .headerText {
+        font-size: 30px;
+        font-weight: bold;
+        margin: 0px 30px;
+    }
+}
