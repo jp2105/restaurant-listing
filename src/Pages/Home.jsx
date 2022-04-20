@@ -4,6 +4,7 @@ import './style.scss'
 import axios from 'axios';
 import APIData from '../data';
 import RestaurantCard from '../Components/RestaurantCard';
+import Map from '../Components/Map';
 const Home = () => {
     const [restaurantData, setRestaurantData] = useState([])
     useEffect(() => {
@@ -28,6 +29,8 @@ const Home = () => {
                     return <RestaurantCard restaurant={item} index={index} />
                 })}
             </div>
+            {restaurantData.length && <Map restaurantData={restaurantData} />}
+
         </div>
     )
 }
