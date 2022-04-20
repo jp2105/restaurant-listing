@@ -28,7 +28,7 @@ const MapDisplay = ({ restaurantData }) => {
         reviews?.map(review => {
             totalRating += review?.rating;
         })
-        return totalRating / reviews.length;
+        return Math.round(totalRating / reviews.length);
     }
     return (
         <div style={{ height: '100vh', width: '100%' }}>
@@ -46,7 +46,7 @@ const MapDisplay = ({ restaurantData }) => {
             >
                 {
                     restaurantData?.map(item => {
-                        return <Marker key={item.id} title={avgRating(item.reviews)} label={item.name} position={item.latlng} />
+                        return <Marker key={item.id} label={`${item.name} \n rating: ${avgRating(item.reviews)}`} position={item.latlng} />
                     })
                 }
             </GoogleMap>
