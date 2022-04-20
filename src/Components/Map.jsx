@@ -10,7 +10,7 @@ const MapDisplay = ({ restaurantData }) => {
     };
     const { isLoaded } = useJsApiLoader({
         id: 'google-map-script',
-        googleMapsApiKey: "AIzaSyCNRjhnt7VdCYf1M9ufEcer_FKoNemttxo",
+        googleMapsApiKey: process.env.Google_API,
     })
     const [map, setMap] = useState(null)
     const onLoad = useCallback(function callback(map) {
