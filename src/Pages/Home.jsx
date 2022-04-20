@@ -12,11 +12,9 @@ const Home = () => {
     }, []);
     const fetchData = () => {
         axios.get('https://techd.s3.amazonaws.com/restaurant-data.json')
-            .then(function (response) {
-                setRestaurantData(APIData.restaurants);
-            })
+            .then(res => setRestaurantData(res.data.restaurants))
             .catch(function (error) {
-                setRestaurantData(APIData.restaurants);
+                console.log(error)
             })
     }
 
