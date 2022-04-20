@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/restaurant-listing/static/css/main.b33e9858.css",
-    "main.js": "/restaurant-listing/static/js/main.5d58f064.js",
+    "main.css": "/restaurant-listing/static/css/main.136e128e.css",
+    "main.js": "/restaurant-listing/static/js/main.19dc2a80.js",
     "static/js/787.932c2711.chunk.js": "/restaurant-listing/static/js/787.932c2711.chunk.js",
     "static/media/6.jpeg": "/restaurant-listing/static/media/6.5ba94bb4d5ae474aac68.jpeg",
     "static/media/1.jpeg": "/restaurant-listing/static/media/1.62ef0da9f4388d6ee5b8.jpeg",
@@ -19,12 +19,12 @@
     "static/media/like.png": "/restaurant-listing/static/media/like.2d3cff309880b6824969.png",
     "static/media/heart.png": "/restaurant-listing/static/media/heart.a13e3857c7c7f11756ac.png",
     "index.html": "/restaurant-listing/index.html",
-    "main.b33e9858.css.map": "/restaurant-listing/static/css/main.b33e9858.css.map",
-    "main.5d58f064.js.map": "/restaurant-listing/static/js/main.5d58f064.js.map",
+    "main.136e128e.css.map": "/restaurant-listing/static/css/main.136e128e.css.map",
+    "main.19dc2a80.js.map": "/restaurant-listing/static/js/main.19dc2a80.js.map",
     "787.932c2711.chunk.js.map": "/restaurant-listing/static/js/787.932c2711.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b33e9858.css",
-    "static/js/main.5d58f064.js"
+    "static/css/main.136e128e.css",
+    "static/js/main.19dc2a80.js"
   ]
 }
